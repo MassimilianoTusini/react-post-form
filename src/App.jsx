@@ -1,4 +1,5 @@
 import MyHeader from "./components/MyHeader"
+import MyMain from "./components/MyMain"
 
 function App() {
 
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
       <MyHeader/>
+      <MyMain/>
     </>
   )
 }
