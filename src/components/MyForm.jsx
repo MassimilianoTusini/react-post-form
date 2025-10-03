@@ -36,41 +36,44 @@ export default function MyForm() {
     };
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Autore:</label>
-                    <input
+        <div className="container">
+            <form onSubmit={handleSubmit} className="form">
+                <div className="form-group">
+                    <label htmlFor="author">Autore:</label>
+                        <input
                         type="text"
                         name="author"
                         value={formData.author}
                         onChange={handleChange}
                         required
-                    />
+                        id="author"
+                        />
                 </div>
 
-                <div>
-                    <label>Titolo:</label>
-                    <input
+                <div className="form-group">
+                    <label htmlFor="title">Titolo:</label>
+                        <input
                         type="text"
                         name="title"
                         value={formData.title}
                         onChange={handleChange}
                         required
-                    />
+                        id="title"
+                        />
                 </div>
 
-                <div>
-                    <label>Testo:</label>
-                    <textarea
+                <div className="form-group">
+                    <label htmlFor="body">Testo:</label>
+                        <textarea
                         name="body"
                         value={formData.body}
                         onChange={handleChange}
                         required
-                    />
+                        id="body"
+                        />
                 </div>
 
-                <div>
+                <div className="form-check">
                     <label>
                         <input
                             type="checkbox"
@@ -82,7 +85,7 @@ export default function MyForm() {
                     </label>
                 </div>
 
-                <button type="submit">Invia</button>
+                <button type="submit" className="btn-submit">Invia</button>
             </form>
         </div>
     );
